@@ -27,7 +27,7 @@ function applySettings() {
 // ---------- progresso permanente: o que Bram lembra ----------
 const META = Object.assign({
   cycles: 0, deaths: 0, wins: 0, memories: [], endings: [], bestiary: {}, knowledge: {},
-  talk: {}, tutorialSeen: false, stats: { cards: 0, combos: 0, fights: 0 },
+  talk: {}, stats: { cards: 0, combos: 0, fights: 0 },
   seenCards: [], relicsSeen: [], ascMax: 0, ascLast: 0, filmSeen: false
 }, store.get(KEYS.meta, {}));
 // Coleção do Diário: toda carta que passou pelas patas de Bram fica registrada.

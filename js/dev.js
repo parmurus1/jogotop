@@ -25,7 +25,7 @@ SCREENS.dev = function (tab = 'cenas') {
       + group('Passagem de ato', [2, 3, 4].map(a => btn('interlude', `Ato ${ROMAN[a]} · ${ACT_INFO[a].name}`, `data-a="${a}"`)).join(''))
       + group('Vaelgrath', btn('phase2', 'Fase 2: a Podridão') + [0, 4, 8].map(m => btn('seal', `O Selo com ${m} memórias`, `data-m="${m}"`)).join(''))
       + group('Finais', Object.entries(ENDINGS).map(([k, e]) => btn('ending', e.title, `data-k="${k}"`)).join(''))
-      + group('Outras', btn('letter', 'A carta do Gaspar') + btn('death', 'Tela de queda') + btn('tutorial', 'Tutorial') + btn('battletut', 'Tutorial do 1º combate') + btn('maptips', 'Dicas do mapa (pós-combate)') + btn('credits', 'Créditos'));
+      + group('Outras', btn('letter', 'A carta do Gaspar') + btn('death', 'Tela de queda') + btn('battletut', 'Tutorial do 1º combate') + btn('maptips', 'Dicas do mapa (pós-combate)') + btn('credits', 'Créditos'));
   } else if (tab === 'memorias') {
     body = `<div class="jgrid">${MEMORIES.map((m, i) => `<div class="jitem">${SPR.img(m.obj, 4)}<b>${i + 1}. ${esc(m.name)}</b><span class="dim">${META.memories.includes(m.id) ? 'recuperada' : 'não recuperada'}</span>
       ${btn('film', 'Ver fita', `data-id="${m.id}"`)}${btn('memfind', 'Achado + escolha', `data-id="${m.id}"`)}</div>`).join('')}</div>`;
@@ -68,7 +68,6 @@ SCREENS.dev = function (tab = 'cenas') {
     seal: el => SCREENS.seal({ preview: true, mem: +el.dataset.m }),
     ending: el => SCREENS.ending(el.dataset.k, { preview: true }),
     death: () => { devRun(1); SCREENS.death({ preview: true }); },
-    tutorial: () => TUTORIAL.open(back),
     battletut: () => { devRun(1); RUN.pos = 'dev'; BATTLE.start({ id: 'dev', type: 'combat', enemy: 'rato' }, { tutorial: true }); },
     credits: () => SCREENS.credits(),
     opening: () => SCREENS.opening(back),

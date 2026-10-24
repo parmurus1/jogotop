@@ -25,7 +25,6 @@ SCREENS.title = function () {
     <nav class="menu">
       ${saved ? '<button data-act="continue">Continuar</button>' : ''}
       <button data-act="new">Nova jornada</button>
-      <button data-act="tutorial">Como jogar</button>
       <button data-act="journal">Diário</button>
       <button data-act="options">Opções</button>
       <button data-act="credits">Créditos</button>
@@ -39,21 +38,13 @@ SCREENS.title = function () {
         if (META.ascMax > 0) { chooseAscension(asc => asc === null ? SCREENS.title() : begin(asc)); return; }
         begin(0);
       };
-      const begin = asc => {
-        if (!META.tutorialSeen) {
-          UI.modal(`<header><div><div class="kicker">Primeira vez no bosque?</div><h2>Ver como se joga?</h2></div></header>
-            <p>O tutorial explica o Saco de Almas, a Fila, os combos, as Máscaras e as memórias. Leva uns três minutos.</p>
-            <div class="row" style="justify-content:flex-end"><button class="btn small" data-m="skip">Pular</button><button class="btn primary" data-m="yes">Ver tutorial</button></div>`,
-          { on: { yes: (el, close) => { close(); TUTORIAL.open(() => startJourney(asc)); }, skip: (el, close) => { close(); META.tutorialSeen = true; saveMeta(); startJourney(asc); } } });
-        } else startJourney(asc);
-      };
+      const begin = asc => startJourney(asc);
       if (saved) {
         UI.modal(`<header><h2>Começar de novo?</h2></header><p>A jornada salva será perdida. As memórias continuam com você.</p>
           <div class="row" style="justify-content:flex-end"><button class="btn small" data-m="close">Voltar</button><button class="btn primary" data-m="ok">Começar</button></div>`,
         { on: { close: (el, close) => close(), ok: (el, close) => { close(); clearRun(); go(); } } });
       } else go();
     },
-    tutorial() { TUTORIAL.open(() => SCREENS.title()); },
     journal() { SCREENS.journal(); },
     options() { SCREENS.options(false); },
     credits() { SCREENS.credits(); },

@@ -342,13 +342,6 @@ body.reduced .fighter.enemy .sprite img { animation: none; }
 input[type=range] { width: min(220px, 44vw); accent-color: var(--ember); }
 .toggle { font: 10px var(--px); padding: 8px 10px; box-shadow: 0 0 0 2px #2b2e38; min-width: 70px; }
 .toggle.on { color: #1a0c04; background: var(--ember); }
-.tut { width: min(860px, 100%); }
-.tut .page { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 18px; align-items: center; min-height: 280px; }
-.tut .demo { display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; padding: 12px; background: rgba(0,0,0,.35); box-shadow: inset 0 0 0 2px #22252e; min-height: 220px; --cw: 70px; position: relative; }
-.tut p { font-size: 22px; }
-.tut .dots { display: flex; gap: 6px; justify-content: center; }
-.tut .dots i { width: 10px; height: 10px; background: #2b2e38; }
-.tut .dots i.on { background: var(--gold); }
 .combo-list { display: grid; gap: 6px; }
 .combo-list div { font-size: 19px; }
 .combo-list b { color: var(--gold); font-weight: 400; }
@@ -369,10 +362,8 @@ input[type=range] { width: min(220px, 44vw); accent-color: var(--ember); }
   .actions { flex-direction: row; order: 3; min-width: 0; }
   .fila { order: 1; }
   .b-hand { gap: 3px; }
-  .battle .card .c-head, .tut .card .c-head { display: none; }
-  .battle .card, .tut .card { grid-template-rows: 1fr auto calc(var(--cwl) * .26); }
-  .tut .page { grid-template-columns: 1fr; }
-  .tut .demo { min-height: 160px; }
+  .battle .card .c-head { display: none; }
+  .battle .card { grid-template-rows: 1fr auto calc(var(--cwl) * .26); }
   .dialog .portrait { width: 60px; height: 60px; } .dialog .portrait img { width: 52px; }
   .dialog .line { font-size: 21px; }
   .intent .lbl { max-width: 40vw; }
@@ -385,9 +376,7 @@ input[type=range] { width: min(220px, 44vw); accent-color: var(--ember); }
   .battle .card { grid-template-rows: 1fr auto calc(var(--cwl) * .26); }
   .battle { gap: 2px; padding-top: 4px; }
 }
-.tut .demo > img.px, .tut .demo > div > img.px { max-height: 26vh; width: auto; height: auto; }
 @media (max-width: 480px) {
-  .tut .dots { display: none; }
   .modal { padding: 14px 12px; }
   h2 { font-size: 28px; }
 }
@@ -628,9 +617,6 @@ body.reduced .dialog .line.lie span.on { animation: none; }
 .memory .frame { min-height: 1.3em; font-size: clamp(20px, 2.6vw, 28px); }
 .btn.skip { opacity: .7; }
 
-.tut-legend { display: flex; flex-direction: column; gap: 6px; font-size: 18px; }
-.tut-legend div { display: flex; gap: 8px; align-items: center; }
-.tut-legend img { width: 22px; height: 22px; }
 
 /* HUD em madeira e pergaminho, combinando com a mesa */
 .chip { background: linear-gradient(#2a1d12, #1a1209); color: #e8d8b4; box-shadow: 0 0 0 1px #5a3e24, 0 0 0 3px #000; }

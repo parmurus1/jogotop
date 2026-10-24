@@ -25,7 +25,7 @@ O progresso fica salvo no próprio navegador (memórias, finais, diário e a jor
 | `js/screens.js` | Telas gerais: título, abertura, mapa, troca de ato, finais, diário, opções. |
 | `js/places.js` | Lugares do mapa como palco com balcão (Ysolde, Tobias, Perpétua, Dona Marga, fogueira), estranhezas, encontros na trilha, memórias e recompensas. |
 | `js/battle.js` | Tela de combate (montar a Fila, prévia, animação dos eventos). |
-| `js/tutorial.js` | Tutorial do menu inicial. |
+| `js/tutorial.js` | Tutorial dentro do jogo: holofote no primeiro combate e dicas do mapa depois da primeira luta. |
 | `js/dev.js` | Modo desenvolvedor (Opções → Modo desenvolvedor): cenas, memórias, falas, lutas e ferramentas. Só existe jogando no computador (arquivo aberto direto ou `localhost`); não vai para o site. |
 
 ## Como adicionar conteúdo
