@@ -1,0 +1,12 @@
+# sistema e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# configuração local do Claude Code
+.claude/
+
+# Vercel CLI
+.vercel/

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#07080a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Bram e as Cinzas de Vaelgrath</title>
+  <meta name="description" content="Roguelite de cartas em pixel art sobre luto e memória. Um coelho que não fala, um lampião que não apaga e um dragão cansado. Joga direto no navegador.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bram e as Cinzas de Vaelgrath">
+  <meta property="og:description" content="Roguelite de cartas em pixel art sobre luto e memória. Joga direto no navegador, no computador ou no celular.">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <main id="app" aria-live="polite"></main>
+  <div id="fxlayer" aria-hidden="true"></div>
+  <div id="vhs" aria-hidden="true">
+    <canvas id="noise"></canvas>
+    <div class="scan"></div>
+    <div class="vignette"></div>
+    <div class="track"></div>
+    <div id="osd"></div>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/scenery.js"></script>
+  <script src="js/data/cards.js"></script>
+  <script src="js/data/masks.js"></script>
+  <script src="js/data/relics.js"></script>
+  <script src="js/data/enemies.js"></script>
+  <script src="js/data/story.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/lamp.js"></script>
+  <script src="js/cinema.js"></script>
+  <script src="js/screens.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/tutorial.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
